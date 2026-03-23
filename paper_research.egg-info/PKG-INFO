@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: paper-research
+Version: 0.1.0
+Summary: Standalone academic paper search: arXiv, OpenAlex, Semantic Scholar
+Requires-Python: >=3.10
+Requires-Dist: arxiv>=2.1

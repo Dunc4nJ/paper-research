@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+paper_research/__init__.py
+paper_research/__main__.py
+paper_research/arxiv_client.py
+paper_research/cache.py
+paper_research/cli.py
+paper_research/models.py
+paper_research/openalex_client.py
+paper_research/search.py
+paper_research/semantic_scholar.py
+paper_research.egg-info/PKG-INFO
+paper_research.egg-info/SOURCES.txt
+paper_research.egg-info/dependency_links.txt
+paper_research.egg-info/entry_points.txt
+paper_research.egg-info/requires.txt
+paper_research.egg-info/top_level.txt

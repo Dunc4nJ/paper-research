@@ -1,0 +1,2 @@
+[console_scripts]
+paper-research = paper_research.cli:main

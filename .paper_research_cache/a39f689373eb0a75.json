@@ -1,0 +1,191 @@
+{
+  "query": "chain of thought prompting",
+  "source": "arxiv",
+  "limit": 5,
+  "timestamp": 1774161134.50192,
+  "papers": [
+    {
+      "paper_id": "arxiv-2201.11903",
+      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+      "authors": [
+        {
+          "name": "Jason Wei",
+          "affiliation": ""
+        },
+        {
+          "name": "Xuezhi Wang",
+          "affiliation": ""
+        },
+        {
+          "name": "Dale Schuurmans",
+          "affiliation": ""
+        },
+        {
+          "name": "Maarten Bosma",
+          "affiliation": ""
+        },
+        {
+          "name": "Brian Ichter",
+          "affiliation": ""
+        },
+        {
+          "name": "Fei Xia",
+          "affiliation": ""
+        },
+        {
+          "name": "Ed Chi",
+          "affiliation": ""
+        },
+        {
+          "name": "Quoc Le",
+          "affiliation": ""
+        },
+        {
+          "name": "Denny Zhou",
+          "affiliation": ""
+        }
+      ],
+      "year": 2022,
+      "abstract": "We explore how generating a chain of thought -- a series of intermediate reasoning steps -- significantly improves the ability of large language models to perform complex reasoning. In particular, we show how such reasoning abilities emerge naturally in sufficiently large language models via a simple method called chain of thought prompting, where a few chain of thought demonstrations are provided as exemplars in prompting. Experiments on three large language models show that chain of thought prompting improves performance on a range of arithmetic, commonsense, and symbolic reasoning tasks. The empirical gains can be striking. For instance, prompting a 540B-parameter language model with just eight chain of thought exemplars achieves state of the art accuracy on the GSM8K benchmark of math word problems, surpassing even finetuned GPT-3 with a verifier.",
+      "venue": "cs.CL",
+      "citation_count": 0,
+      "doi": "",
+      "arxiv_id": "2201.11903",
+      "url": "https://arxiv.org/abs/2201.11903",
+      "source": "arxiv",
+      "_bibtex_override": ""
+    },
+    {
+      "paper_id": "arxiv-2311.09277",
+      "title": "Contrastive Chain-of-Thought Prompting",
+      "authors": [
+        {
+          "name": "Yew Ken Chia",
+          "affiliation": ""
+        },
+        {
+          "name": "Guizhen Chen",
+          "affiliation": ""
+        },
+        {
+          "name": "Luu Anh Tuan",
+          "affiliation": ""
+        },
+        {
+          "name": "Soujanya Poria",
+          "affiliation": ""
+        },
+        {
+          "name": "Lidong Bing",
+          "affiliation": ""
+        }
+      ],
+      "year": 2023,
+      "abstract": "Despite the success of chain of thought in enhancing language model reasoning, the underlying process remains less well understood. Although logically sound reasoning appears inherently crucial for chain of thought, prior studies surprisingly reveal minimal impact when using invalid demonstrations instead. Furthermore, the conventional chain of thought does not inform language models on what mistakes to avoid, which potentially leads to more errors. Hence, inspired by how humans can learn from both positive and negative examples, we propose contrastive chain of thought to enhance language model reasoning. Compared to the conventional chain of thought, our approach provides both valid and invalid reasoning demonstrations, to guide the model to reason step-by-step while reducing reasoning mistakes. To improve generalization, we introduce an automatic method to construct contrastive demonstrations. Our experiments on reasoning benchmarks demonstrate that contrastive chain of thought can serve as a general enhancement of chain-of-thought prompting.",
+      "venue": "cs.CL",
+      "citation_count": 0,
+      "doi": "",
+      "arxiv_id": "2311.09277",
+      "url": "https://arxiv.org/abs/2311.09277",
+      "source": "arxiv",
+      "_bibtex_override": ""
+    },
+    {
+      "paper_id": "arxiv-2306.00550",
+      "title": "Chain-Of-Thought Prompting Under Streaming Batch: A Case Study",
+      "authors": [
+        {
+          "name": "Yuxin Tang",
+          "affiliation": ""
+        }
+      ],
+      "year": 2023,
+      "abstract": "Recently, Large Language Models (LLMs) have demonstrated remarkable capabilities. Chain-of-Thought (CoT) has been proposed as a way of assisting LLMs in performing complex reasoning. However, developing effective prompts can be a challenging and labor-intensive task. Many studies come out of some way to automatically construct CoT from test data. Most of them assume that all test data is visible before testing and only select a small subset to generate rationales, which is an unrealistic assumption. In this paper, we present a case study on how to construct and optimize chain-of-thought prompting using batch data in streaming settings.",
+      "venue": "cs.LG",
+      "citation_count": 0,
+      "doi": "",
+      "arxiv_id": "2306.00550",
+      "url": "https://arxiv.org/abs/2306.00550",
+      "source": "arxiv",
+      "_bibtex_override": ""
+    },
+    {
+      "paper_id": "arxiv-2502.05879",
+      "title": "Enhancing Depression Detection with Chain-of-Thought Prompting: From Emotion to Reasoning Using Large Language Models",
+      "authors": [
+        {
+          "name": "Shiyu Teng",
+          "affiliation": ""
+        },
+        {
+          "name": "Jiaqing Liu",
+          "affiliation": ""
+        },
+        {
+          "name": "Rahul Kumar Jain",
+          "affiliation": ""
+        },
+        {
+          "name": "Shurong Chai",
+          "affiliation": ""
+        },
+        {
+          "name": "Ruibo Hou",
+          "affiliation": ""
+        },
+        {
+          "name": "Tomoko Tateyama",
+          "affiliation": ""
+        },
+        {
+          "name": "Lanfen Lin",
+          "affiliation": ""
+        },
+        {
+          "name": "Yen-wei Chen",
+          "affiliation": ""
+        }
+      ],
+      "year": 2025,
+      "abstract": "Depression is one of the leading causes of disability worldwide, posing a severe burden on individuals, healthcare systems, and society at large. Recent advancements in Large Language Models (LLMs) have shown promise in addressing mental health challenges, including the detection of depression through text-based analysis. However, current LLM-based methods often struggle with nuanced symptom identification and lack a transparent, step-by-step reasoning process, making it difficult to accurately classify and explain mental health conditions. To address these challenges, we propose a Chain-of-Thought Prompting approach that enhances both the performance and interpretability of LLM-based depression detection. Our method breaks down the detection process into four stages: (1) sentiment analysis, (2) binary depression classification, (3) identification of underlying causes, and (4) assessment of severity. By guiding the model through these structured reasoning steps, we improve interpretability and reduce the risk of overlooking subtle clinical indicators. We validate our method on the E-DAIC dataset, where we test multiple state-of-the-art large language models. Experimental results indicate that our Chain-of-Thought Prompting technique yields superior performance in both classification accuracy and the granularity of diagnostic insights, compared to baseline approaches.",
+      "venue": "cs.CL",
+      "citation_count": 0,
+      "doi": "",
+      "arxiv_id": "2502.05879",
+      "url": "https://arxiv.org/abs/2502.05879",
+      "source": "arxiv",
+      "_bibtex_override": ""
+    },
+    {
+      "paper_id": "arxiv-2209.08141",
+      "title": "Psychologically-informed chain-of-thought prompts for metaphor understanding in large language models",
+      "authors": [
+        {
+          "name": "Ben Prystawski",
+          "affiliation": ""
+        },
+        {
+          "name": "Paul Thibodeau",
+          "affiliation": ""
+        },
+        {
+          "name": "Christopher Potts",
+          "affiliation": ""
+        },
+        {
+          "name": "Noah D. Goodman",
+          "affiliation": ""
+        }
+      ],
+      "year": 2022,
+      "abstract": "Probabilistic models of language understanding are valuable tools for investigating human language use. However, they need to be hand-designed for a particular domain. In contrast, large language models (LLMs) are trained on text that spans a wide array of domains, but they lack the structure and interpretability of probabilistic models. In this paper, we use chain-of-thought prompts to introduce structures from probabilistic models into LLMs. We explore this approach in the case of metaphor understanding. Our chain-of-thought prompts lead language models to infer latent variables and reason about their relationships in order to choose appropriate paraphrases for metaphors. The latent variables and relationships chosen are informed by theories of metaphor understanding from cognitive psychology. We apply these prompts to the two largest versions of GPT-3 and show that they can improve performance in a paraphrase selection task.",
+      "venue": "cs.CL",
+      "citation_count": 0,
+      "doi": "",
+      "arxiv_id": "2209.08141",
+      "url": "https://arxiv.org/abs/2209.08141",
+      "source": "arxiv",
+      "_bibtex_override": ""
+    }
+  ]
+}
