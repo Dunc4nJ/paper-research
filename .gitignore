@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.paper_research_cache/
+/dist/
+/build/
+*.egg

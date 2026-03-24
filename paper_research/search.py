@@ -25,6 +25,7 @@ import urllib.error
 from typing import cast
 
 from paper_research.arxiv_client import search_arxiv
+from paper_research.hf_papers_client import search_hf_papers
 from paper_research.models import Author, Paper
 from paper_research.openalex_client import search_openalex
 from paper_research.semantic_scholar import search_semantic_scholar
@@ -188,6 +189,13 @@ def search_papers(
                 cache_put(query, "arxiv", limit, _papers_to_dicts(papers))
                 source_stats["arxiv"] = len(papers)
                 logger.info("arXiv returned %d papers for %r", len(papers), query)
+
+            elif src_lower == "hf":
+                papers = search_hf_papers(query, limit=limit)
+                all_papers.extend(papers)
+                cache_put(query, "hf", limit, _papers_to_dicts(papers))
+                source_stats["hf"] = len(papers)
+                logger.info("HuggingFace returned %d papers for %r", len(papers), query)
 
             else:
                 logger.warning("Unknown literature source: %s (skipped)", src)
