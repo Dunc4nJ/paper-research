@@ -70,6 +70,8 @@ def main() -> None:
                         help='From date: "2 months", "2025-01", "2025-01-15"')
     parser.add_argument("--until", type=str, default=None,
                         help='To date: "2025-06", "2025-06-30"')
+    parser.add_argument("--enrich-hf", action="store_true",
+                        help="Enrich results with HuggingFace metadata")
     args = parser.parse_args()
 
     import logging
@@ -94,6 +96,10 @@ def main() -> None:
         date_to=date_to,
     )
 
+    if args.enrich_hf:
+        from paper_research.hf_papers_client import enrich_with_hf_metadata
+        papers = enrich_with_hf_metadata(papers)
+
     output = []
     for p in papers:
         authors = [a.name for a in p.authors]
@@ -107,6 +113,7 @@ def main() -> None:
             "url": p.url,
             "citation_count": p.citation_count,
             "source": p.source,
+            "hf_metadata": p.hf_metadata,
         })
 
     json.dump(output, sys.stdout, indent=2)

@@ -17,7 +17,11 @@ Run the search script against all three sources:
 python3 ~/.agent/skills/paper-research/scripts/search.py "query terms" --limit 20
 ```
 
-Options: `--sources arxiv,openalex,s2` (default: all three), `--limit N` (per source).
+Options: `--sources arxiv,openalex,s2,hf` (default: arxiv,openalex,s2), `--limit N` (per source), `--enrich-hf` (add HF metadata).
+
+The `hf` source searches HuggingFace Papers (hybrid semantic + full-text). It is NOT included by default — add it explicitly with `--sources arxiv,openalex,s2,hf`.
+
+The `--enrich-hf` flag fetches additional metadata from HuggingFace for each paper with an arXiv ID: upvotes, AI summary, GitHub repo, project page, and counts of linked models/datasets/spaces.
 
 Output: JSON array to stdout. Each entry has: title, authors, year, abstract, arxiv_id, doi, url, citation_count, source.
 
@@ -36,6 +40,12 @@ python3 ~/.agent/skills/paper-research/scripts/download.py --ids 2201.11903 2305
 ```
 
 Downloads approved papers from arXiv by ID. Only papers with valid arXiv IDs can be downloaded.
+
+Add `--method hf` to download papers as markdown from HuggingFace instead of PDF. Falls back to PDF if HF markdown is unavailable. This is a free alternative to GPU extraction for papers with HTML versions on arXiv.
+
+```bash
+python3 ~/.agent/skills/paper-research/scripts/download.py --ids 2301.00001 --method hf --output /tmp/paper-research/
+```
 
 ### 5. GPU Extraction
 

@@ -95,6 +95,7 @@ def _dicts_to_papers(dicts: list[dict[str, object]]) -> list[Paper]:
                     arxiv_id=str(d.get("arxiv_id", "")),
                     url=str(d.get("url", "")),
                     source=str(d.get("source", "")),
+                    hf_metadata=d.get("hf_metadata") if isinstance(d.get("hf_metadata"), dict) else None,
                 )
             )
         except (KeyError, TypeError, ValueError):

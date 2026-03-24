@@ -47,7 +47,8 @@ class Paper:
     doi: str = ""
     arxiv_id: str = ""
     url: str = ""
-    source: str = ""  # "semantic_scholar" | "arxiv"
+    source: str = ""  # "semantic_scholar" | "arxiv" | "openalex" | "hf"
+    hf_metadata: dict | None = field(default=None, repr=False, compare=False, hash=False)
     _bibtex_override: str = field(default="", repr=False)
 
     # ------------------------------------------------------------------
@@ -172,6 +173,7 @@ class Paper:
             "url": self.url,
             "source": self.source,
             "cite_key": self.cite_key,
+            "hf_metadata": self.hf_metadata,
         }
 
 
